@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Template</title>
+  </head>
+  <body>
+    <h1>Name: {{name}}</h1>
+    <h1>Age: {{age}}</h1>
+
+    {{! Lists }}
+    <ul>
+      {{#each hobbies}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+
+    {{! conditionals }}
+    {{#if isRegistered}}
+      <h1>Registered</h1>
+    {{else}}
+      <h1>Not Registered</h1>
+    {{/if}}
+
+    {{! unless }}
+    {{#unless isRegistered}}
+      <h1>Not Registered</h1>
+    {{/unless}}
+
+  </body>
+</html>

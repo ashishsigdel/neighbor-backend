@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket Connection</title>
+    <!-- css -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="join">
+      <!-- Username and password field with label -->
+      <form class="join-form" id="join-form">
+        <div class="form-item">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="username" required />
+        </div>
+
+        <button id="join">Join</button>
+      </form>
+    </div>
+
+    <div class="main-section">
+      <div class="row">
+        <!-- list of users with all global chat -->
+        <div class="col col-user-side">
+          <div class="users">
+            <h3>Users</h3>
+            <ul id="users">
+              <!-- global chat broadcast -->
+              <li class="user">
+                <span class="username">Global Chat</span>
+                <span class="user-status"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- chat box -->
+        <div class="col col-chat-box">
+          <div class="chat-box">
+            <form id="chat-form" class="chat-form">
+              <div class="form-item">
+                <input
+                  type="text"
+                  id="msg"
+                  placeholder="Enter message"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <button>Send</button>
+            </form>
+
+            <h3 style="color: white">Messages</h3>
+            <div class="message-list">
+              <ul id="message-list">
+                <li class="message">Gel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
